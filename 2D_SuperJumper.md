@@ -116,6 +116,7 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
         1. We are able to achieve this through detection of collision and trigger used to detect collision.
         2. Triggers allow the player to pass through the game object. Triggers are mainly used for tutorials and power-ups.
         
+        //video1.mp4
         <p align="center">
                 <img alt="door col" src= ./Images/door_coll.png>
         </p>
@@ -125,33 +126,40 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
     1. When the player has collected the necessary collectables to complete the level is also when we can conclude whether a level is completed or not.
         1. We do this by keeping a track of the collectables collected by the player after the player has collected one.
         
-        [Loom _ Free Screen & Video Recording Software - 28 January 2022 (1).mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c421f06-74e3-4f3e-a33d-0fe5e8d260a2/Loom___Free_Screen__Video_Recording_Software_-_28_January_2022_(1).mp4)
+        //video2.mp4
         
         In the above sample video, we keep a track of the number of collectables we need in order for the level to get complete. Once we have collected all the stuff we can see a level complete screen pops up at the end of the video 😎
-        
 
-## 6. PLAYER LIVES
+---
+
+# 6. PLAYER LIVES
 
 - To create a Life system we need to do things, first one is the Sprite that we will be displayed on the screen for the user, the second is a controller which decreases a life whenever the player collides with an enemy or increase a life when the user collects a power-up that restores a lost life.
 - The very first step to creating a Life system is to start by creating a sprite that will be displayed on the screen for the player that will be indicating how many lives are remaining for the player.
     
-    
-    ![Lives.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ccc2123-45c6-45ec-93aa-ee8c73d72884/Lives.png)
-    
-    ![Lives_hie.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b574c9aa-fa47-41bb-ba15-941532915e4e/Lives_hie.png)
+    <p align="center">
+        <img alt="Lives" src= ./Images/Lives.png>
+    </p>    
+
+    <p align="center">
+        <img alt="Lives_hie" src= ./Images/Lives_hie.png>
+    </p>
     
 - The next step is to add a method that will decrease the life by one whenever our player collides with the enemy. We can start by detecting the collision in our Enemy Controller and if the collision is with the player we decrease the life by one.
 - To decrease the life in real time we will be assigning these sprites to our game objects that we have created in our script and we will simply set its visibility to false whenever the player collides with an enemy. by doing so it will appear as if the lives are being decreased but in reality, we are simply changing the values of visibility of the sprite.
     
-    ![Lives_scrp.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/28b712d9-2cd8-4df4-a482-da56368700f6/Lives_scrp.png)
     
+    <p align="center">
+        <img alt="Lives_scrp" src= ./Images/Lives_scrp.png>
+    </p>
 - Now, you might be thinking there might be a time when the player will run out of lives what happens in this scenario?? well basically this is where we make the game over for the player.
 - Once the whole implementation is done correctly this is what the final output must look like. 🤩
     
     [Lives_decrease.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9785a991-4c4d-42a9-ab9d-1cf94637a92f/Lives_decrease.mp4)
     
+---
 
-## 7. POWER-UPS
+# 7. POWER-UPS
 
 If you want to make your game interesting then add the feature of Power-ups and Collectibles. Power-ups are nothing but collecting items or points which will give the player a special ability. The ability could be anything- double jump, dash, or some attacks. 
 
