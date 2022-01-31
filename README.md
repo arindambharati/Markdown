@@ -61,20 +61,20 @@
 
 - Download *Unity Hub* from the given link 👉 [https://unity3d.com/get-unity/download](https://unity3d.com/get-unity/download)
     
-    ![Download Unity Hub](./downlad_unity_hub.png)
+    ![Download Unity Hub](./Images/downlad_unity_hub.png)
     
 - Install the Unity Hub Setup
 - After Installation, Go to the **Installs** tab on the left of the Unity Hub.
 - Click the **Install Editor** button on the top right.
     
-    ![Install Unity Hub](./install_unity_hub.png)
+    ![Install Unity Hub](./Images/install_unity_hub.png)
     
 
   
 
 - Choose one of the **Long Term Support (LTS) versions** to install in your system. LTS versions are bug-free and the team behind the unity supports the software by updating, patching, and maintaining it throughout the lifetime.
     
-    ![Unity Editor Installation](./editor.png)
+    ![Unity Editor Installation](./Images/editor.png)
     
 - Check ☑️ the **Microsoft Visual Studio Community** for Dev Tools and **Documentation.**
 - *Don’t Worry!!* You can add all the build modules later on as per your project requirements.
@@ -95,7 +95,7 @@
 
 - **Entity** → Entities are nothing but *game objects*. *Game Objects* are the objects that you see in a game. Say, you are playing “Super Mario”. You are the player(*Mario character)* through which you interact to kill the enemy (*a turtle*). In this scenario, both the Mario player and the enemy are game objects. The *red-brick* platform through which Mario and its enemies are moving is also a game object. In other words, each and every object that you see in a game is actually a game object *(Entity)*.
     
-    ![mario](./mario.png)
+    ![mario](./Images/mario.png)
     
 - **Component** → Components refer to the *properties* of entities. Properties can be anything, a game object’s height, position, color, or any data that represents it.
 - **System** → It is the logic by which you can manipulate the values of the *components.* Suppose you want to change the height of an entity while playing the game. In “Super Mario”, the height of the main player (the entity) changes while achieving some bonus points. You can do all of such manipulation with the help of some logic. That logical process is what the S*ystem* refers to.
@@ -112,27 +112,27 @@
 
 When you open Unity first time, it is easy to get confused with all the windows and tools that show up. As such, Unity allows you to customize this layout to your liking and use those Views only that are currently required. Click-dragging any tab of any view helps us to move and position the View where we want it to be, we can also detach the Window from the Editor if we want. For eg, the Hierarchy Window is being click-dragged :
 
-![Hierarchy_move](./Hierarchy_move.png)
+![Hierarchy_move](./Images/Hierarchy_move.png)
 
 *The Project Panel* has been dragged and attached beside the Hierarchy tab in the picture below: 
 
-![Project_move](./Project_move.png)
+![Project_move](./Images/Project_move.png)
 
 *The Hierarchy tab* has been completely detached from the Editor and can be used just like this as shown below, which can now be said to be a “Floating Editor Window”: 
 
-![Detach_hierarchy](./Detach_hierarchy.png)
+![Detach_hierarchy](./Images/Detach_hierarchy.png)
 
 Note:🔴
 
 - A View can have multiple tabs, in which case these tabs can be shown only one at a time, for eg, below, we can see Hierarchy and Project tabs in the same view, in this case, we can open up either the Project Tab or Hierarchy tab only one at a time, of course, tabs can be shifted elsewhere as shown above if they need to be viewed simultaneously.
     
-    ![Alternate_tab](./Alternate_tab.png)
+    ![Alternate_tab](./Images/Alternate_tab.png)
     
 - Whenever you are working in tabbed views, the “active” tab (the tab that has focus) has a thin blue stripe at the top, like in the above screenshot, you can see the Project tab having a thin blue stripe
 - When multiple tabs are attached to a view that takes up more space than provided, Unity provided small directional arrows to look at the tabs that aren’t visible, for eg, below you can see 3 tabs in one view, but the Project tab isn’t visible, hence click on the arrow to show up :
     
     
-    ![more tabs](./moretabs.png)
+    ![more tabs](./Images/moretabs.png)
     
 
 - At any time, right-click can be used on a tab to show up the different options specific to it, for eg, the below is shown for the Console tab:
@@ -143,7 +143,7 @@ Note:🔴
 
 - Finally, once you have decided on your own layout of the editor with required tabs and views, you also have the option to save the layout using the *Layout* options found under the layout dropdown (top right corner of Editor), then you can quickly switch back to your saved layouts if any changes are made to the current layout at any point:
     
-    ![layout_save](./layout_save.png)
+    ![layout_save](./Images/layout_save.png)
     
 
 <aside>
@@ -158,7 +158,7 @@ Note:🔴
 
 The Toolbar at the top of the Editor helps in navigating around the scene view and positioning or moving GameObjects.
 
-![navigation](./navigation.png)
+![navigation](./Images/navigation.png)
 
 - Pan – hold the Alt key and click-drag with the middle mouse. Also, hold Alt+Ctrl and click and drag
 Zoom: Zoom in and out of scene view, hold the Alt key, and right-click and drag
@@ -169,13 +169,13 @@ Zoom: Zoom in and out of scene view, hold the Alt key, and right-click and drag
 - Scale tool (Hotkey R) – Increase or decrease the size of objects. Click and drag on the cube at the end of the axis you wish to scale. The white center cube allows you to scale on all axes at once uniformly. 
 The same functionality can be achieved by manually entering the respective values under Transform in the Inspector for any object
 
-![Scale](./Scale.png)
+![Scale](./Images/Scale.png)
 
-![Transform](./Transform.png)
+![Transform](./Images/Transform.png)
 
 - Rect Transform tool (Hotkey T) – This tool is a combination of the Move, Rotate and Scale tools
 
-![Rect_tool](./Rect_tool.png)
+![Rect_tool](./Images/Rect_tool.png)
 
 - Transform tool (Hotkey Y) – Works as a combination of all the previous tools (except for Rect Transform)
 
@@ -183,22 +183,22 @@ The same functionality can be achieved by manually entering the respective value
 
 - Handle Rotation – Switch between Local and Global. When set to local, the tool will be rotated based on the selected Object’s relative rotation. When set to Global the tool will always be aligned to global rotations
 
-![Handle_rotation](./Handle_rotation.png)
+![Handle_rotation](./Images/Handle_rotation.png)
 
 - Custom Editor tools – Displays any custom editor tools that have been added to the Project
 
-![Custom_editor](./Custom_editor.png)
+![Custom_editor](./Images/Custom_editor.png)
 
 - Center or Pivot – Changes where the tool gizmo appears on the object, this only changes if the GameObject has a custom pivot point
 - Toggle Grid Snapping – Only available when the handle rotation is set to Global, this allows snapping the movement of objects in the Editor
     
-    ![Grid_Snapping](./Grid_Snapping.png)
+    ![Grid_Snapping](./Images/Grid_Snapping.png)
     
     Top Right corner dropdowns: 
     
 - Collab – Launch Unity Collaborate
     
-    ![Collab](./COllab.png)
+    ![Collab](./Images/COllab.png)
     
 - Cloud icon opens the Unity Services Window
 - *Account* lets you access your Unity account
@@ -218,7 +218,7 @@ The same functionality can be achieved by manually entering the respective value
 - The **Scene View** is where you can interact with the game objects visually. You can manipulate, select and modify the game GameObjects as per your project requirements. The Scene view can show a 3D or 2D perspective, depending on the type of project.
 - Use all the *ToolBar* options in the **scene view** to interact with the game objects.
     
-    ![scene viiew](./scene_viiew.png)
+    ![scene viiew](./Images/scene_viiew.png)
     
 
 <aside> 
@@ -233,13 +233,13 @@ The same functionality can be achieved by manually entering the respective value
 
 - The *game view* represents the final published application where all the game objects from the scene view get displayed.
     
-    ![gameview](./gameview.png)
+    ![gameview](./Images/gameview.png)
     
 - In the game view, you cannot edit the entities.
 - The game view is used to test the application in unity.
 - Use the ‘Play/Pause/ Step’ Toolbar options to test it.
     
-    ![gameviewtoolbar](./gameviewtoolbar.png)
+    ![gameviewtoolbar](./Images/gameviewtoolbar.png)
     
 
 <aside>
@@ -256,7 +256,7 @@ The same functionality can be achieved by manually entering the respective value
 - Hierarchy makes it easy for sorting game objects or club them together in a parent object. It is also easy for removing and add game objects from Hierarchy rather than the Scene view.
 - You can press Ctrl + 4 to open the Hierarchy window.
 
-![hie](./hie.png)
+![hie](./Images/hie.png)
 
 <aside>
 
@@ -272,7 +272,7 @@ The same functionality can be achieved by manually entering the respective value
 - We can get a more detailed view of the Project Panel by clicking on the context button which is on the top-right of the window and selecting **One column Layout** or **Two-column Layout**.
 - We can use Ctrl + 9 to open the Project Panel window.
 
-![Project Panel](./PP.png)
+![Project Panel](./Images/PP.png)
 
 <aside>
 
@@ -288,7 +288,7 @@ The same functionality can be achieved by manually entering the respective value
 - If you are building your own Project and in your Script and if there is any Error or Message that you wanted to Print at Runtime, that Time you can check via Console window for more information
 - To Open Console window from Unity Main Menu, Select Window → General → Console
     
-    ![Console](./Console.png)
+    ![Console](./Images/Console.png)
     
 - You can also show your own messages in the Console using the Debug class.
 - Everything that is written to the **Console Window** (by Unity, or your own code) is also written to a Log File.
@@ -330,12 +330,12 @@ The same functionality can be achieved by manually entering the respective value
 - When you open an empty project, at the very beginning you will see a blank inspector window on the right of the editor. *If you don’t see any inspector window floating on your editor then do the following: 👇*
     - From the menu, select **Windows > General > Inspector.**
         
-        ![inspector](./inspector.png)
+        ![inspector](./Images/inspector.png)
         
 - Click the *Main Camera* from the Hierarchy Window and you will see its properties in the inspector.
 - *Main Camera* is actually a *game object* in Unity. Hence, you can customize its properties i.e., enabling/disabling the game object, changing its position, color, size, projection, and many more.
     
-    ![editor](./e1.png)
+    ![editor](./Images/e1.png)
     
 - *Recommended: 🔴 Play around with these values to get comfortable with the **Inspector.***
 
