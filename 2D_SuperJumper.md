@@ -169,13 +169,15 @@ Here, you will learn how to implement Power-Ups or Collectibles.
 2. Use a collider and in the collider component click ✅ the “Is Trigger” option.
 3. Now, while implementing the logic, use compares tag to compare with the game object it collides with and after the collision, destroy the power-up game object.
     
-    ![powerups.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80d45f39-f68a-4530-81ec-1b994bc76e08/powerups.png)
-    
+    <p align="center">
+        <img alt="power ups" src=./Images/powerups.png>
+    </p>
 
 You can add tons of features here like, after collecting the item enabling the double jump ability to the player for some seconds. This way, the player could only double jump if he gets the power up feature and that too for a limited period of time. To do this you can add a timer or use coroutines, for which you can read in the Dash mechanism section. 
 
 - *Refer to the clip below to get an idea of what to implement.*
     
+    //jumpo.mp4
     [2022-01-29 02-09-15.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab3b31a6-a658-46a3-ba55-32ca9dba3f14/2022-01-29_02-09-15.mp4)
     
     Here, after getting the red game object, which is a collectable item here, the player(black square object) could move much higher and enabled the double jump ability for 5 secs. Also, observe the timer on the top-right. That’s what you have to implement and of course, go beyond this project with your imagination and implement as many as cool features you want to.  
@@ -187,22 +189,28 @@ You can add tons of features here like, after collecting the item enabling the d
             
             Here is a code where you can get an idea of how to do it. 
             
-            ![collision.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23c666fa-85df-4742-b99d-472e0df090e0/collision.png)
-            
+            <p align="center">
+                <img alt="collision" src= ./Images/collision.png>
+            </p>
+
             Also, this is not the end. You need to write a logic for OnCollisionExit2D as well. Do it by yourself. It will boost your confidence.
             
         - Double Jump: Can we use a counter for it? 🤔 It’s like if you press the UP Arrow key once, then it will count for 1 time and jump once. If pressed twice then it will count for 2 times and jump twice. hmmmmmm.... ????? But how to implement it?
             
             Let’s see a code and understand it. 
             
-            ![doblejump.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3b34e05-fe81-4ba4-9a3e-b9c32fc9859f/doblejump.png)
-            
+            <p align="center">
+                <img alt="double jump" src= ./Images/doblejump.png>
+            </p>
+
             Here, the counter is extraJump variable. By default, the game object has the ability to jump by once. So when extraJump is 1 then the game object will jump twice. The extraJump will only be available if the game object stands on the ground platform. The value of extraJump is decreased to zero so that when the player inputs the bound key(*UP-ARROW*) the second time, the extraJump would become 0, and the next time if the player continuously presses the key again, it wouldn't affect anything to the game object and the player won't be able to jump more than twice.
             
         - Triple Jump: Change the value of extraJump to 2.
     - *You can use any number of jumps depending upon what you want in your game.*
-    
-    ![jumpsss.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/071f7461-f591-444a-b546-f880588d4487/jumpsss.png)
+
+    <p align="center">
+        <img alt="jump" src= ./Images/jumpsss.png>
+    </p>
     
     ## B. Dash mechanism
     
@@ -218,15 +226,22 @@ You can add tons of features here like, after collecting the item enabling the d
     
     The following script shows how the Dash can be implemented inside the Update: 
     
-    ![GetKeyDown_Shift_script.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7caafd1f-3b87-4a9c-a9d2-73eb2d9c211f/GetKeyDown_Shift_script.png)
-    
+    <p align="center">
+        <img alt="get key down" src= ./Images/GetKeyDown_Shift_script.png>
+    </p>
+
     And the dashCoroutine IEnumerator: 
     
-    ![Dash_IEnum.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/906a15dc-ce40-442a-a7f1-bdb15e170c5f/Dash_IEnum.png)
-    
+     <p align="center">
+        <img alt="Dash" src= ./Images/Dash_IEnum.png>
+    </p>
+
     And Finally applying the impulse force in physics for the RigidBody:  
     
-    ![Dash_physics.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ace5bbb-8909-42f9-8d3d-805edf404616/Dash_physics.png)
+
+     <p align="center">
+        <img alt="dash physics" src= ./Images/Dash_physics.png>
+    </p>
     
     Of course, it would also be great if a collectable is implemented upon picking up which, the player would get the ability to dash. The Cooldown time should also be set as such so that it cannot be used continuously rather only after a certain amount of time, after having used it once. In the above script, we have demonstrated that to be 2 seconds, but you should set this as required by your game. The below video shows a quick animation of how this has been implemented for a 2D platformer game : 
     
@@ -234,8 +249,9 @@ You can add tons of features here like, after collecting the item enabling the d
     
     As shown above, you can see the Player dashes as soon as ‘LShift’ key is input. It would be an additional achievement if you can use a particle system or any other way to show a trailing effect when the dash happens. Remember to lock the dash ability at the start, but only activate it once a collectable/item has been picked up.
     
+---
 
-## 8. FALLING PLATFORMS
+# 8. FALLING PLATFORMS
 
 You can add so many features to your game to make it challenging and engaging to the gamers. One such feature is the *falling of a platform* when the player jumps over it or stands on it. It’s not so tough to implement if you think logically. It is all about the physics mechanism that would require to make a game object (here, it is the ‘platform’) fall when the player stands on it. 
 
@@ -253,32 +269,43 @@ The reason why we would want to change the body type from dynamic to kinematic a
 
 You can also add the ‘Game Over’ feature if the player falls to the ground and nowhere along with the platform. *Refer to the **Game Over** section to implement this feature.*
 
-## 9. PATROLLING ENEMIES
+---
+
+# 9. PATROLLING ENEMIES
 
 - Basically, there are 2 ways of making enemies patrol in a specific area.
     1. Using waypoints: we can set waypoints and make the game object travel within those waypoints. Below is a piece of code for further reference.
         
-        ![Enemy_Patrol_wp.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/387a3622-d8fd-4159-bfdd-9a1e67d73b5a/Enemy_Patrol_wp.png)
+        <p align="center">
+            <img alt="enemy patrol" src= ./Images/Enemy_Patrol_wp.png>
+        </p>
         
         In the above code, we are calculating the distance between the waypoint and our enemy game object. By doing so once we get the distance which is less than 0.01f we are changing the waypoint to the other one that is set by the user in the Unity inspector and we are also flipping/rotating our game object so that it is facing towards the other waypoint. So, it goes on like a loop and the game object keeps on moving within the waypoints. 😎
         
     2. Using Raycasts : A Raycast is like a laser beam fired from a point that we call as “Origin” along a particular direction to detect if our game object is still in collision with the other game object and if it is not in collision we perform certain operations. The big advantage is that every object which makes contact with the laser beam can be reported!
         
-        ![Patrolling_enemy_raycast.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7179ccd4-f292-4b93-9325-230e106f0308/Patrolling_enemy_raycast.png)
+        <p align="center">
+            <img alt="enemy raycast" src= ./Images/Patrolling_enemy_raycast.png>
+        </p>
         
         In the above code, RaycastHit2D returns information about an object detected by a raycast in 2D physics. The RaycastHit2D class is used by [Physics2D.Raycast](https://docs.unity3d.com/ScriptReference/Physics2D.Raycast.html) and other functions to return information about the objects detected within the range fired by raycasts. 👾
         
-    
+---
 
-## 10. UI BASICS
+# 10. UI BASICS
 
 - What is a UI???
     
     UI or User Interface is something which allows the User to interact with or to be specific with game development it is something that allows a Player to interact with. Unity UI is a UI toolkit for developing user interfaces for games and applications. It is a Game Object-based UI system that uses Components and the Game View to arrange, position, and style user interfaces.
     
-    ![UI_1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cedf0199-81d4-46eb-93b2-117c9c2974a1/UI_1.png)
-    
-    ![UI_2_2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/57723c93-1ff2-4782-b869-7087e70c3ee1/UI_2_2.png)
+
+    <p align="center">
+        <img alt="UI_1" src= ./Images/UI_1.png>
+    </p>
+
+    <p align="center">
+        <img alt="UI_2_2" src= ./Images/UI_2_2.png>
+    </p>
     
 - Above snapshots show images of Main Menus of games. These main menus are the best examples of UI used in games. Obviously any game will have a menu. When we press on the buttons say single player or exit button then it will either start the game or exit the game by the functionality that has been assigned to the button itself.
 - Some of the main components of UI are:
@@ -294,23 +321,28 @@ You can also add the ‘Game Over’ feature if the player falls to the ground a
     - Whenever you add a UI component Canvas will also be added along with it.
     - To insert a Canvas, right click in the Scene Hierarchy and go to Create → UI → Canvas.
     
-    ![UI_2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f097ee02-8f90-4ed6-9d1a-a15cd7f96647/UI_2.png)
-    
+    <p align="center">
+        <img alt="UI_2" src= ./Images/UI_2.png>
+    </p>
 
 1. Buttons
     - Anything when clicked and performs an action after it has been clicked is called a button. In real life we have a switch/button to turn the light on/off in the same we have UI buttons for certain operations.
     - In game development we can consider a mouse button which when clicked during a game might fire a weapon or do any other operation assigned to it depending upon the game.
     - To insert a button, right click in the Scene Hierarchy and go to Create → UI → Button. If you do not have an existing Canvas and an Event System, Unity will automatically create one for you, and place the button inside the Canvas
     
-    ![UI_buttons.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6230ea84-ca9a-4f86-ba21-8da193ea6924/UI_buttons.png)
-    
+    <p align="center">
+        <img alt="UI Buttons" src= ./Images/UI_buttons.png>
+    </p>
 
 1. Texts
     - Every game has a name which is displayed in the UI and for displaying those names we use UI Texts.
     - Texts are non – interactable they’re used for displaying some information. For eg: it can be used to display instructions or it can be used to display a player’s current score in the game.
     - To insert a Text, right click in the Scene Hierarchy and go to Create → UI → Text.
     
-    ![UI_text.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d096761a-2c70-4363-9c3a-d27f558f2642/UI_text.png)
+
+    <p align="center">
+        <img alt="UI_text" src= ./Images/UI_text.png>
+    </p>
     
 2. Panel
     - Panel is a UI component that acts as a container in Unity.
@@ -318,30 +350,42 @@ You can also add the ‘Game Over’ feature if the player falls to the ground a
     - Panel defines an area that will by default stretch to fit its parent RectTransform dimensions.
     - To insert a Panel, right click in the Scene Hierarchy and go to Create → UI → Panel.
     
-    ![UI_panel.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/263cfa9a-a118-4978-8cf8-dda664c517e7/UI_panel.png)
+
+    <p align="center">
+        <img alt="UI_Panel" src= ./Images/UI_panel.png>
+    </p>
     
 3. Slider
     - The Slider UI element is commonly used where a certain value should be set between a minimum and maximum value pair.
     - One of the most common usages of this is for audio volume, screen brightness, or for doing zoom.
     - To create a slider UI, right-click on the scene hierarchy and select Game Object -> UI -> Slider. A new slider element will display on your scene.
     
-    ![UI_Slider.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed79a004-b5ac-4388-b8b6-0438eafa6a4f/UI_Slider.png)
-    
+    <p align="center">
+        <img alt="UI_Slider" src= ./Images/UI_Slider.png>
+    </p>
 
-## 11. GAME OVER
+---
+
+# 11. GAME OVER
 
 - Whenever our player is out of lives or we run out of time to complete a level we see a certain screen that tells us what exactly??? 🤔 That’s right it tells us that our game is over.
 - There’s a certain condition after which we lose our game or we can say that our game gets over. The condition can be anything we might run out of time or we might have come in contact of enemy or we might run out of lives.
 - Let me show you how to make the game over when our player gets detected by our enemy.
     
-    ![Game_over.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de2ac240-d6c4-4756-9bf1-d0e6593618ec/Game_over.png)
+
+    <p align="center">
+        <img alt="Game over" src= ./Images/Game_over.png>
+    </p>
     
 - In the above code the game gets over when the player is detected by the enemy’s raycast within a range. Once the player is detected we are freezing the time in the time which is equivalent to pausing the game. After that I am setting the visibility of my game over panel as true which is initially false before the game starts. When the game gets over this is basically what you see.
     
-    ![GO.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/596e7063-68af-4fdb-a04f-e4ae462a2191/GO.png)
-    
+    <p align="center">
+        <img alt="GO" src= ./Images/GO.png>
+    </p>
 
-## 12. LEVEL LOCK/UNLOCK AND PLAYERPREFS
+---
+
+# 12. LEVEL LOCK/UNLOCK AND PLAYERPREFS
 
 PlayerPrefs: In order to save the game progress, Unity provides something called “Player Preferences” or ‘PlayerPrefs’ in short. This is a class that stores Player preferences between game sessions. What this means is, say you exit from the game today and re-open it tomorrow, it should be able to save your session and start from where you left off and shouldn’t start from the beginning of the game, what we call as ‘SAVING’ in games. PlayerPrefs can store string, float and integer values into the user’s platform registry. The location of saving these values will depend on the type of platform being used as mentioned below.
 
@@ -388,35 +432,52 @@ String
 
 Now for Locking levels, you can create an enum of different statuses as shown below, based on the requirements of your game: 
 
-![Status_levels.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f51741c-068b-43d0-9376-a7697222bee8/Status_levels.png)
+<p align="center">
+    <img alt="Status levels" src= ./Images/Status_levels.png>
+</p>
 
 As shown in the example above, every time a level is completed, you have the status as “Completed”, levels that are unlocked will have the “Unlocked” status, and levels that have not been played yet will be kept as “Locked”. The following shows the buttons for levels, you can design in a similar way: 
 
-![AllLevels.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a3e6186-1f26-4eaf-a628-ae41909ed85e/AllLevels.png)
+<p align="center">
+    <img alt="All levels" src= ./Images/AllLevels.png>
+</p>
 
 Then, for each button, the status can be set based on its state, of course, levels such as the lobby (menu screen) and Level 1 (the very first level) needs to be kept at ‘Unlocked’ status from the beginning so that they can be accessed by the user in the Start itself. The below shows an example of a switch case statement that allows the button click function to work only when the level is in ‘Unlocked’ status: 
 
-![Button_locks.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23b77a46-9cd1-437c-8c0e-90ed4738fb59/Button_locks.png)
+
+<p align="center">
+    <img alt="button lock" src= ./Images/Button_locks.png>
+</p>
 
 Finally, the PlayerPrefs can be set and fetched as required as shown below: 
 
-![Prefs_levelValue.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5069f31d-0de6-4a08-956b-d749a95d5385/Prefs_levelValue.png)
+<p align="center">
+    <img alt="Prefs" src= ./Images/Prefs_levelValue.png>
+</p>
 
 You can always find the values in your local device in places, for example, the below shows the storage location on a Windows PC (in the registry editor): 
 
-![Reg_ed.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f72132bc-453d-4ce5-b098-0ae8f36bef67/Reg_ed.png)
+<p align="center">
+    <img alt="Reg_ed" src= ./Images/Reg_ed.png>
+</p>
 
 Now, you can come inside the storage location and delete the values manually if you want to not have the saved values for any reason (for example, When the User wants to delete all saves and start a New Game) otherwise, there are 2 other ways to clear all values: 
 
 - Use DeleteAll or DeleteKey functions using the C# script
 - Use Clear All Player Prefs option under Edit category:
 
-![ClearAllPrefs.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d29892d4-d45c-4195-958a-bb4850f05ccd/ClearAllPrefs.png)
+<p align="center">
+    <img alt="clear prefs" src= ./Images/ClearAllPrefs.png>
+</p>
 
-## 13. GAME LOOP (LEVELS/GAMEPLAY)
+---
+
+# 13. GAME LOOP (LEVELS/GAMEPLAY)
 
 - Super Jumper is a level-based game. Every level will have its own complexity and toughness. As of now, we would suggest a 3 level architecture that we can add to this project but of course, you are free to design more levels as you wish to. Every level that has been completed will unlock a new feature for the player that will help the player in completing the further levels. Every level completed will show a “Level completed” text/panel and will also be displaying which ability has been unlocked for the player.
 - Level 1: This will be a basic level that will allow the user to explore the level and play around with and as it is the very first level the difficulty level will be minimal 😜. Some enemies will be added in the very first level to make it a little challenging for the player, please feel free to design the level as you like with enemies and static platforms
 - Level 2: Once level 1 has been completed a new feature named double/triple jump can be unlocked for the player. This feature will help the player in covering distances that is far away and which cannot be covered by a single jump. Of course, there will be collectibles that the player would have to pick up first to activate the Special Jump ability. Also, you can add moving platforms to this level to make it a little tougher for the player. 😎
 - Level 3: Once level 2 has been completed a new feature called Dash/Speed booster will be unlocked for the player. This feature will help the player in covering very long distances which cannot be reached by double/triple jumps. Of course, there can be another type of collectible that the player would have to pick up first to activate the Special Dash ability 😯. All other features i.e. patrolling enemies & falling platforms can also be included in this particular level.
 - You can add further levels based on your vision of your game. Remember this is your game and it has to be fun for you to play when you play it yourself. You can add interesting stuff to the game, taking references from other 2D platformer type games as well.
+
+---
