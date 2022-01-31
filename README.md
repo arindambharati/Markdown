@@ -25,7 +25,7 @@
 ---
 </aside>
 
-![discord](./discord.png)
+![discord](./Images/discord.png)
 
 ---
 <aside>
