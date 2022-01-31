@@ -3,7 +3,21 @@
 Design a 2D Platformer in which a player has to combat enemies and conquer the challenges he would face to reach the goal and finish the level. Use different types of player mechanics to make the game appealing to the gamers such as double/triple jump, dash, and many more.
 
 ---
-
+### What you will learn in this project
+- [Player Movement](#player-movement)
+- [Camera Following The Player](#camera-following-the-player)
+- [Collision Detection](#collision-detection)
+- [Collision Matrix](#collision-matrix)
+- [Level Complete](#level-conmplete)
+- [Player Lives](#player-lives)
+- [Power Ups](#power-ups)
+- [Falling Platform](#falling-platform)
+- [Patrolling Enemies](#patrolling-enemies)
+- [UI Basics](#ui-basics)
+- [Game Over](#game-over)
+- [Level Lock/Unlock and PlayerPrefs](#level-lock/unlock-and-playerprefs)
+- [Game Loop](#game-loop)
+---
 # 1. PLAYER MOVEMENT
 
 Player Movement can be achieved in different ways in unity, depending on the specific requirement, few are:
