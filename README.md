@@ -9,15 +9,15 @@
 
 - [How to Install Unity](#installation)
 - [About Unity](#about-unity)
-- Layout
-- Toolbar and Navigation in Unity Editor
-- Scene view
-- Game view
-- Hierarchy
-- Project Panel
-- Console
-- Components
-- Inspector
+- [Layout](#layout)
+- [Toolbar and Navigation in Unity Editor](#toolbar-and-navigation-in-unity-editor)
+- [Scene view](#scene-view)
+- [Game view](#game-view)
+- [Hierarchy](#hierarchy)
+- [Project Panel](#project-panel)
+- [Console](#console)
+- [Components](#components)
+- [Inspector](#inspector)
 
 
 🚀 **[Join Discord Server](https://discord.gg/J5zDscnzms)**
