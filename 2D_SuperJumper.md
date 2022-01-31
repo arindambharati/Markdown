@@ -3,7 +3,21 @@
 Design a 2D Platformer in which a player has to combat enemies and conquer the challenges he would face to reach the goal and finish the level. Use different types of player mechanics to make the game appealing to the gamers such as double/triple jump, dash, and many more.
 
 ---
-
+### What you will learn in this project
+- [Player Movement](#player-movement)
+- [Camera Following The Player](#camera-following-the-player)
+- [Collision Detection](#collision-detection)
+- [Collision Matrix](#collision-matrix)
+- [Level Complete](#level-conmplete)
+- [Player Lives](#player-lives)
+- [Power Ups](#power-ups)
+- [Falling Platform](#falling-platform)
+- [Patrolling Enemies](#patrolling-enemies)
+- [UI Basics](#ui-basics)
+- [Game Over](#game-over)
+- [Level Lock/Unlock and PlayerPrefs](#level-lock/unlock-and-playerprefs)
+- [Game Loop](#game-loop)
+---
 # 1. PLAYER MOVEMENT
 
 Player Movement can be achieved in different ways in unity, depending on the specific requirement, few are:
@@ -116,7 +130,10 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
         1. We are able to achieve this through detection of collision and trigger used to detect collision.
         2. Triggers allow the player to pass through the game object. Triggers are mainly used for tutorials and power-ups.
         
-        //video1.mp4
+
+https://user-images.githubusercontent.com/59511246/151860224-5476d460-195b-4a03-87fd-478210364c4f.mp4
+
+
         <p align="center">
                 <img alt="door col" src= ./Images/door_coll.png>
         </p>
@@ -126,8 +143,10 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
     1. When the player has collected the necessary collectables to complete the level is also when we can conclude whether a level is completed or not.
         1. We do this by keeping a track of the collectables collected by the player after the player has collected one.
         
-        //video2.mp4
-        
+
+https://user-images.githubusercontent.com/59511246/151860305-3fc80df1-5fde-4e7c-942f-f4817989ae3a.mp4
+
+
         In the above sample video, we keep a track of the number of collectables we need in order for the level to get complete. Once we have collected all the stuff we can see a level complete screen pops up at the end of the video 😎
 
 ---
@@ -153,10 +172,11 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
         <img alt="Lives_scrp" src= ./Images/Lives_scrp.png>
     </p>
 - Now, you might be thinking there might be a time when the player will run out of lives what happens in this scenario?? well basically this is where we make the game over for the player.
-- Once the whole implementation is done correctly this is what the final output must look like. 🤩
-    
-    [Lives_decrease.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9785a991-4c4d-42a9-ab9d-1cf94637a92f/Lives_decrease.mp4)
-    
+- Once the whole implementation is done correctly this is what the final output must look like. 🤩    
+
+https://user-images.githubusercontent.com/59511246/151860379-56de99f7-4105-4e4e-a50f-e55e5c377079.mp4
+
+
 ---
 
 # 7. POWER-UPS
@@ -175,16 +195,16 @@ Here, you will learn how to implement Power-Ups or Collectibles.
 
 You can add tons of features here like, after collecting the item enabling the double jump ability to the player for some seconds. This way, the player could only double jump if he gets the power up feature and that too for a limited period of time. To do this you can add a timer or use coroutines, for which you can read in the Dash mechanism section. 
 
-- *Refer to the clip below to get an idea of what to implement.*
+- *Refer to the clip below to get an idea of what to implement.*   
+
+https://user-images.githubusercontent.com/59511246/151860449-db017c12-340d-48ae-ba7d-f6f301c6d854.mp4
+
+
+
+   Here, after getting the red game object, which is a collectable item here, the player(black square object) could move much higher and enabled the double jump ability for 5 secs. Also, observe the timer on the top-right. That’s what you have to implement and of course, go beyond this project with your imagination and implement as many as cool features you want to.  
     
-    //jumpo.mp4
-    [2022-01-29 02-09-15.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab3b31a6-a658-46a3-ba55-32ca9dba3f14/2022-01-29_02-09-15.mp4)
-    
-    Here, after getting the red game object, which is a collectable item here, the player(black square object) could move much higher and enabled the double jump ability for 5 secs. Also, observe the timer on the top-right. That’s what you have to implement and of course, go beyond this project with your imagination and implement as many as cool features you want to.  
-    
-    ## A. Single/Double/Triple Jump
-    
-    - Player Jump is one of the most crucial elements for this project. Before making the double jump or triple jump first, go through the *Player Movement* section to get an idea of how you can use physics in a particular game object to move it. Also, get yourself familiarized with the RigidBody2D, BoxCollider2D components.
+   ## A. Single/Double/Triple Jump
+   - Player Jump is one of the most crucial elements for this project. Before making the double jump or triple jump first, go through the *Player Movement* section to get an idea of how you can use physics in a particular game object to move it. Also, get yourself familiarized with the RigidBody2D, BoxCollider2D components.
         - Single Jump: If you have tried to write a code for jump mechanics then you must have seen how the game object behaves when pressing the attached input. It goes infinite at a one-time press. How to fix it? *Hint:* Limit it by using a **bool value**. Also, do not forget to read about *Collison Detection* as it is important for this task.
             
             Here is a code where you can get an idea of how to do it. 
@@ -206,48 +226,43 @@ You can add tons of features here like, after collecting the item enabling the d
             Here, the counter is extraJump variable. By default, the game object has the ability to jump by once. So when extraJump is 1 then the game object will jump twice. The extraJump will only be available if the game object stands on the ground platform. The value of extraJump is decreased to zero so that when the player inputs the bound key(*UP-ARROW*) the second time, the extraJump would become 0, and the next time if the player continuously presses the key again, it wouldn't affect anything to the game object and the player won't be able to jump more than twice.
             
         - Triple Jump: Change the value of extraJump to 2.
-    - *You can use any number of jumps depending upon what you want in your game.*
-
+   - *You can use any number of jumps depending upon what you want in your game.*
     <p align="center">
         <img alt="jump" src= ./Images/jumpsss.png>
     </p>
     
-    ## B. Dash mechanism
+   ## B. Dash mechanism
+  
+   Many game characters will have the ability to rocket forward or backwards with their legs trailing after them as if firing a jet-pack horizontally, though they usually aren’t wearing one. When doing this, they will be able to travel a distance many times the length of their body in a split second. This move tends to be triggered by tapping or flicking the same direction more than once but some games can also have a dedicated ‘dash button’.
     
-    Many game characters will have the ability to rocket forward or backwards with their legs trailing after them as if firing a jet-pack horizontally, though they usually aren’t wearing one. When doing this, they will be able to travel a distance many times the length of their body in a split second. This move tends to be triggered by tapping or flicking the same direction more than once but some games can also have a dedicated ‘dash button’.
+   There are many ways to implement this feature. For this game, we will try to implement a simple Dash using a dedicated dash button, let’s say the ‘Shift’ button on the keyboard. Now, imagine the requirements for this feature, we need a duration for which the dash will be active, and then maybe a cool down duration after which the dash can happen again.
     
-    There are many ways to implement this feature. For this game, we will try to implement a simple Dash using a dedicated dash button, let’s say the ‘Shift’ button on the keyboard. Now, imagine the requirements for this feature, we need a duration for which the dash will be active, and then maybe a cool down duration after which the dash can happen again.
+   A very common approach to solving this is using IEnumerators. ([https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html))
     
-    A very common approach to solving this is using IEnumerators. ([https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html))
+   In order to understand, we need to go through what is Coroutine first. [MonoBehaviour.StartCoroutine](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html) returns a Coroutine. Instances of this class are only used to reference these coroutines and do not hold any exposed properties or functions.
     
-    In order to understand, we need to go through what is Coroutine first. [MonoBehaviour.StartCoroutine](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html) returns a Coroutine. Instances of this class are only used to reference these coroutines and do not hold any exposed properties or functions.
+   A coroutine is a function that can suspend its execution (yield) until the given [YieldInstruction](https://docs.unity3d.com/ScriptReference/YieldInstruction.html) finishes. For the dash function, we actually need to wait for duration till the dash is completed and only after the cooldown period, allow the player to re-use the dash.
     
-    A coroutine is a function that can suspend its execution (yield) until the given [YieldInstruction](https://docs.unity3d.com/ScriptReference/YieldInstruction.html) finishes. For the dash function, we actually need to wait for duration till the dash is completed and only after the cooldown period, allow the player to re-use the dash.
-    
-    The following script shows how the Dash can be implemented inside the Update: 
-    
-    <p align="center">
+  The following script shows how the Dash can be implemented inside the Update: 
+   <p align="center">
         <img alt="get key down" src= ./Images/GetKeyDown_Shift_script.png>
     </p>
-
-    And the dashCoroutine IEnumerator: 
-    
-     <p align="center">
+   
+   And the dashCoroutine IEnumerator: 
+    <p align="center">
         <img alt="Dash" src= ./Images/Dash_IEnum.png>
     </p>
 
-    And Finally applying the impulse force in physics for the RigidBody:  
-    
-
-     <p align="center">
+   And Finally applying the impulse force in physics for the RigidBody:  
+   <p align="center">
         <img alt="dash physics" src= ./Images/Dash_physics.png>
     </p>
     
-    Of course, it would also be great if a collectable is implemented upon picking up which, the player would get the ability to dash. The Cooldown time should also be set as such so that it cannot be used continuously rather only after a certain amount of time, after having used it once. In the above script, we have demonstrated that to be 2 seconds, but you should set this as required by your game. The below video shows a quick animation of how this has been implemented for a 2D platformer game : 
-    
-    [Ellen_Dash.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6cd7b88d-0fe6-4009-a8bd-62bb54172427/Ellen_Dash.mp4)
-    
-    As shown above, you can see the Player dashes as soon as ‘LShift’ key is input. It would be an additional achievement if you can use a particle system or any other way to show a trailing effect when the dash happens. Remember to lock the dash ability at the start, but only activate it once a collectable/item has been picked up.
+   Of course, it would also be great if a collectable is implemented upon picking up which, the player would get the ability to dash. The Cooldown time should also be set as such so that it cannot be used continuously rather only after a certain amount of time, after having used it once. In the above script, we have demonstrated that to be 2 seconds, but you should set this as required by your game. The below video shows a quick animation of how this has been implemented for a 2D platformer game :    
+
+https://user-images.githubusercontent.com/59511246/151860533-f1aba062-5dab-48b4-8939-14507a05b14e.mp4
+
+   As shown above, you can see the Player dashes as soon as ‘LShift’ key is input. It would be an additional achievement if you can use a particle system or any other way to show a trailing effect when the dash happens. Remember to lock the dash ability at the start, but only activate it once a collectable/item has been picked up.
     
 ---
 
@@ -256,9 +271,11 @@ You can add tons of features here like, after collecting the item enabling the d
 You can add so many features to your game to make it challenging and engaging to the gamers. One such feature is the *falling of a platform* when the player jumps over it or stands on it. It’s not so tough to implement if you think logically. It is all about the physics mechanism that would require to make a game object (here, it is the ‘platform’) fall when the player stands on it. 
 
 - *Refer to the clip below to understand what we want you to implement.*
-    
-    [2022-01-27 17-05-14.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5671e361-8279-44e9-8547-ea55dd79ba0d/2022-01-27_17-05-14.mp4)
-    
+        
+
+https://user-images.githubusercontent.com/59511246/151860664-b6bd0914-9bb4-4081-a3c2-3e1f34b63e84.mp4
+
+
 
 *Hints:* By default, the body type of the rigidbody component is Dynamic. Make it to Kinematic. Now, get the rigidbody component of the platform game object. Compare it with the player game object when both of them collide with each other. On collision, change the body type of the platform from kinematic to dynamic.
 
