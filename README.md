@@ -138,7 +138,7 @@ Note:🔴
 - At any time, right-click can be used on a tab to show up the different options specific to it, for eg, the below is shown for the Console tab:
     
     
-    ![right-Click](./right-Click.png)
+    ![right-Click](./Images/right-Click.png)
     
 
 - Finally, once you have decided on your own layout of the editor with required tabs and views, you also have the option to save the layout using the *Layout* options found under the layout dropdown (top right corner of Editor), then you can quickly switch back to your saved layouts if any changes are made to the current layout at any point:
@@ -179,7 +179,7 @@ The same functionality can be achieved by manually entering the respective value
 
 - Transform tool (Hotkey Y) – Works as a combination of all the previous tools (except for Rect Transform)
 
-![Transform_tool](./Transform_tool.png)
+![Transform_tool](./Images/Transform_tool.png)
 
 - Handle Rotation – Switch between Local and Global. When set to local, the tool will be rotated based on the selected Object’s relative rotation. When set to Global the tool will always be aligned to global rotations
 
