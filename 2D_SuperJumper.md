@@ -116,18 +116,9 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
         1. We are able to achieve this through detection of collision and trigger used to detect collision.
         2. Triggers allow the player to pass through the game object. Triggers are mainly used for tutorials and power-ups.
         
-<<<<<<< HEAD
-=======
-       
-
-https://user-images.githubusercontent.com/59511246/151835872-cc453420-6fff-4963-8f9b-108f9f586625.mp4
-
->>>>>>> 2cebdf5478663bf0d432793a8243f1105b3c01d7
-        
         <p align="center">
                 <img alt="door col" src= ./Images/door_coll.png>
         </p>
-        
         In the above video, a collider has been added to the door and the Is Trigger component of the collider has been checked(set to true). So now the door allows the player to pass through it and acts as a Trigger which when comes in contact with the player performs a certain operation i.e. indicates the player that the level is complete and then proceeds to move on to the next level.
         
     
