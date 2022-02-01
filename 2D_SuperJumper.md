@@ -130,24 +130,21 @@ In such cases, a collision matrix can be used to uncheck collisions between spec
         1. We are able to achieve this through detection of collision and trigger used to detect collision.
         2. Triggers allow the player to pass through the game object. Triggers are mainly used for tutorials and power-ups.
         
-
 https://user-images.githubusercontent.com/59511246/151860224-5476d460-195b-4a03-87fd-478210364c4f.mp4
-
-
-        <p align="center">
-                <img alt="door col" src= ./Images/door_coll.png>
-        </p>
-        In the above video, a collider has been added to the door and the Is Trigger component of the collider has been checked(set to true). So now the door allows the player to pass through it and acts as a Trigger which when comes in contact with the player performs a certain operation i.e. indicates the player that the level is complete and then proceeds to move on to the next level.
+   <p align="center">
+         <img alt="door col" src= ./Images/door_coll.png>
+   </p>
+   
+   In the above video, a collider has been added to the door and the Is Trigger component of the collider has been checked(set to true). So now the door allows the player to pass through it and acts as a Trigger which when comes in contact with the player performs a certain operation i.e. indicates the player that the level is complete and then proceeds to move on to the next level.
         
-    
-    1. When the player has collected the necessary collectables to complete the level is also when we can conclude whether a level is completed or not.
-        1. We do this by keeping a track of the collectables collected by the player after the player has collected one.
+ 
+  1. When the player has collected the necessary collectables to complete the level is also when we can conclude whether a level is completed or not.
+     1. We do this by keeping a track of the collectables collected by the player after the player has collected one.
         
 
 https://user-images.githubusercontent.com/59511246/151860305-3fc80df1-5fde-4e7c-942f-f4817989ae3a.mp4
 
-
-        In the above sample video, we keep a track of the number of collectables we need in order for the level to get complete. Once we have collected all the stuff we can see a level complete screen pops up at the end of the video 😎
+   In the above sample video, we keep a track of the number of collectables we need in order for the level to get complete. Once we have collected all the stuff we can see a level complete screen pops up at the end of the video 😎
 
 ---
 
